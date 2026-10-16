@@ -165,13 +165,6 @@ I'm a **B.Tech Information Technology** undergraduate at **Velammal Institute of
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Buvaneswaran50&layout=compact&theme=dark&hide_border=true&bg_color=05070D&title_color=5FA8FF&text_color=94A0BA&langs_count=8" alt="Top Languages" height="165"/>
 
-</div>
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/Buvaneswaran50/Buvaneswaran50/output/github-contribution-grid-snake-dark.svg" alt="Contribution snake animation"/>
-
-</div>
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:2F6FED,100:05070D&height=3" alt="divider">
 
