@@ -9,7 +9,7 @@
 <br/><br/>
 
 <a href="https://www.linkedin.com/in/buvaneswaranmaha"><img src="https://img.shields.io/badge/LinkedIn-1B3A8A?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-<a href="mailto:buvaneswaran50@gmail.com"><img src="https://img.shields.io/badge/Gmail-2F6FED?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/></a>
+<a href="mailto:buvaneswaransha@gmail.com"><img src="https://img.shields.io/badge/Gmail-2F6FED?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/></a>
 <a href="https://github.com/Buvaneswaran50"><img src="https://img.shields.io/badge/GitHub-05070D?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
 <img src="https://komarev.com/ghpvc/?username=Buvaneswaran50&label=Profile+Views&color=2F6FED&style=for-the-badge" alt="Profile Views"/>
 
@@ -174,6 +174,39 @@ I'm a **B.Tech Information Technology** undergraduate at **Velammal Institute of
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:05070D,100:2F6FED&height=3" alt="divider">
 
 ## &nbsp;🐍&nbsp; Contribution Snake
+name: Generate Snake Animation
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"   # every 12 hours
+  workflow_dispatch:          # lets you run it manually
+  push:
+    branches:
+      - main                  # change to master if that is your default branch
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Generate snake SVGs
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 <div align="center">
 
@@ -187,7 +220,7 @@ I'm a **B.Tech Information Technology** undergraduate at **Velammal Institute of
 
 <div align="center">
 
-<a href="mailto:buvaneswaran50@gmail.com"><img src="https://img.shields.io/badge/buvaneswaran50@gmail.com-2F6FED?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+<a href="mailto:buvaneswaransha@gmail.com"><img src="https://img.shields.io/badge/buvaneswaran50@gmail.com-2F6FED?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 <a href="https://www.linkedin.com/in/buvaneswaranmaha"><img src="https://img.shields.io/badge/buvaneswaranmaha-1B3A8A?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
 <a href="https://github.com/Buvaneswaran50"><img src="https://img.shields.io/badge/Buvaneswaran50-05070D?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
 
