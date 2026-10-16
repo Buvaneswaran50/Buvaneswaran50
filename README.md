@@ -165,48 +165,7 @@ I'm a **B.Tech Information Technology** undergraduate at **Velammal Institute of
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Buvaneswaran50&layout=compact&theme=dark&hide_border=true&bg_color=05070D&title_color=5FA8FF&text_color=94A0BA&langs_count=8" alt="Top Languages" height="165"/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Buvaneswaran50&theme=react-dark&bg_color=05070D&color=5FA8FF&line=2F6FED&point=FFFFFF&area=true&hide_border=true" alt="Contribution Activity Graph" width="100%"/>
-
-<img src="https://github-profile-trophy.vercel.app/?username=Buvaneswaran50&theme=darkhub&no-frame=true&no-bg=true&margin-w=10&row=1&column=6" alt="GitHub Trophies" />
-
 </div>
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:05070D,100:2F6FED&height=3" alt="divider">
-
-## &nbsp;🐍&nbsp; Contribution Snake
-name: Generate Snake Animation
-
-on:
-  schedule:
-    - cron: "0 */12 * * *"   # every 12 hours
-  workflow_dispatch:          # lets you run it manually
-  push:
-    branches:
-      - main                  # change to master if that is your default branch
-
-permissions:
-  contents: write
-
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - name: Generate snake SVGs
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-
-      - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 <div align="center">
 
